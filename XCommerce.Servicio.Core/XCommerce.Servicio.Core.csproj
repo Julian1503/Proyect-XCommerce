@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CF1F9E3-2B3B-41C4-82C8-2C963E085FD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XCommerce.Servicio.Core</RootNamespace>
+    <AssemblyName>XCommerce.Servicio.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0-preview6-19304-03\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0-preview6-19304-03\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Articulo\ArticuloServicio.cs" />
+    <Compile Include="Articulo\DTOs\ArticuloDto.cs" />
+    <Compile Include="Articulo\IArticuloServicio.cs" />
+    <Compile Include="BajaArticulo\BajaArticuloServicio.cs" />
+    <Compile Include="BajaArticulo\DTOs\BajaArticuloDto.cs" />
+    <Compile Include="BajaArticulo\IBajaArticuloServicio.cs" />
+    <Compile Include="Banco\BancoServicio.cs" />
+    <Compile Include="Banco\DTOs\BancoDto.cs" />
+    <Compile Include="Banco\IBancoServicio.cs" />
+    <Compile Include="Base\BaseDto.cs" />
+    <Compile Include="Base\ComprobanteBase.cs" />
+    <Compile Include="Caja\CajaServicio.cs" />
+    <Compile Include="Caja\DTOs\CajaDto.cs" />
+    <Compile Include="Caja\DTOs\DetalleCajaDto.cs" />
+    <Compile Include="Caja\ICajaServicio.cs" />
+    <Compile Include="Categoria\CategoriaServicio.cs" />
+    <Compile Include="Categoria\DTOs\CategoriaDto.cs" />
+    <Compile Include="Categoria\ICategoriaServicio.cs" />
+    <Compile Include="Cliente\DTOs\ClienteDto.cs" />
+    <Compile Include="Cliente\ClienteServicio.cs" />
+    <Compile Include="Cliente\IClienteServicio.cs" />
+    <Compile Include="ComprobanteCompra\ComprobanteCompraServicio.cs" />
+    <Compile Include="ComprobanteCompra\DTOs\ComprobanteCompraDto.cs" />
+    <Compile Include="ComprobanteCompra\IComprobanteCompraServicio.cs" />
+    <Compile Include="Comprobante\CalcularDescuento.cs" />
+    <Compile Include="Comprobante\ComprobanteMesaServicio.cs" />
+    <Compile Include="Comprobante\DTOs\ComprobanteMesaDto.cs" />
+    <Compile Include="Comprobante\NumeroDeComprobante.cs" />
+    <Compile Include="CondicionIva\CondicionIvaCalcular.cs" />
+    <Compile Include="Configuracion\ConfiguracionServicio.cs" />
+    <Compile Include="Configuracion\DTOs\ConfiguracionDto.cs" />
+    <Compile Include="Configuracion\IConfiguracionServicio.cs" />
+    <Compile Include="Delivery\DeliveryServicio.cs" />
+    <Compile Include="Delivery\DTOs\DeliveryDto.cs" />
+    <Compile Include="Delivery\IDeliveryServicio.cs" />
+    <Compile Include="DetalleCaja\DetalleCajaServicio.cs" />
+    <Compile Include="DetalleCaja\IDetalleCajaServicio.cs" />
+    <Compile Include="DetalleComprobante\DTOs\DetalleComprobanteDto.cs" />
+    <Compile Include="Comprobante\IComprobanteMesaServicio.cs" />
+    <Compile Include="Cliente\DTOs\CtaCteDto.cs" />
+    <Compile Include="CondicionIva\CondicionIvaServicio.cs" />
+    <Compile Include="CondicionIva\DTOs\CondicionIvaDto.cs" />
+    <Compile Include="CondicionIva\ICondicionIvaServicio.cs" />
+    <Compile Include="CuentaCorriente\CuentaCorrienteServicio.cs" />
+    <Compile Include="CuentaCorriente\DTOs\CuentaCorrienteDto.cs" />
+    <Compile Include="CuentaCorriente\ICuentaCorrienteServicio.cs" />
+    <Compile Include="DetalleComprobante\DetalleComprobanteServicio.cs" />
+    <Compile Include="DetalleComprobante\IDetalleComprobanteServicio.cs" />
+    <Compile Include="Empleado\DTOs\EmpleadoDto.cs" />
+    <Compile Include="Empleado\EmpleadoServicio.cs" />
+    <Compile Include="Empleado\IEmpleadoServicio.cs" />
+    <Compile Include="Empresa\DTOs\EmpresaDto.cs" />
+    <Compile Include="Empresa\EmpresaServicio.cs" />
+    <Compile Include="Empresa\IEmpresaServicio.cs" />
+    <Compile Include="Entidad\Entidad.cs" />
+    <Compile Include="FormaPago\DTOs\FormaPagoChequeDto.cs" />
+    <Compile Include="FormaPago\DTOs\FormaPagoCtaCteDto.cs" />
+    <Compile Include="FormaPago\DTOs\FormaPagoDto.cs" />
+    <Compile Include="FormaPago\DTOs\FormaPagoEfectivoDto.cs" />
+    <Compile Include="FormaPago\DTOs\FormaPagoTarjetaDto.cs" />
+    <Compile Include="FormaPago\FormaPagoServicio.cs" />
+    <Compile Include="FormaPago\FormaPagoServicioBase.cs" />
+    <Compile Include="FormaPago\FormaPagoServicioCheque.cs" />
+    <Compile Include="FormaPago\FormaPagoServicioCtaCte.cs" />
+    <Compile Include="FormaPago\FormaPagoServicioEfectivo.cs" />
+    <Compile Include="FormaPago\FormaPagoServicioTarjeta.cs" />
+    <Compile Include="FormaPago\IFormaPago.cs" />
+    <Compile Include="FormaPago\IFormaPagoServicio.cs" />
+    <Compile Include="Kiosco\DTOs\ComprobanteKioscoDto.cs" />
+    <Compile Include="Kiosco\IKioscoServicio.cs" />
+    <Compile Include="Kiosco\KioscoServicio.cs" />
+    <Compile Include="ListaPrecios\DTOs\ListaPreciosDto.cs" />
+    <Compile Include="ListaPrecios\IListaPreciosServicio.cs" />
+    <Compile Include="ListaPrecios\ListaPreciosServicio.cs" />
+    <Compile Include="Localidad\DTOs\LocalidadDto.cs" />
+    <Compile Include="Localidad\ILocalidadServicio.cs" />
+    <Compile Include="Localidad\LocalidadServicio.cs" />
+    <Compile Include="Marca\DTOs\MarcaDto.cs" />
+    <Compile Include="Marca\IMarcaServicio.cs" />
+    <Compile Include="Marca\MarcaServicio.cs" />
+    <Compile Include="Mesa\DTOs\MesaDto.cs" />
+    <Compile Include="Mesa\IMesaServicio.cs" />
+    <Compile Include="Mesa\MesaServicio.cs" />
+    <Compile Include="MotivoBaja\DTOs\MotivoBajaDto.cs" />
+    <Compile Include="MotivoBaja\IMotivoBajaServicio.cs" />
+    <Compile Include="MotivoBaja\MotivoBajaServicio.cs" />
+    <Compile Include="MotivoReserva\DTOs\MotivoReservaDto.cs" />
+    <Compile Include="MotivoReserva\IMotivoReservaServicio.cs" />
+    <Compile Include="MotivoReserva\MotivoReservaServicio.cs" />
+    <Compile Include="Movimiento\DTOs\MovimientoDto.cs" />
+    <Compile Include="Movimiento\IMovimientoServicio.cs" />
+    <Compile Include="Movimiento\MovimientoServicio.cs" />
+    <Compile Include="Operacion\DTOs\OperacionDto.cs" />
+    <Compile Include="Operacion\IOperacionServicio.cs" />
+    <Compile Include="Operacion\OperacionServicio.cs" />
+    <Compile Include="Persona\DTOs\PersonaDto.cs" />
+    <Compile Include="PlanTarjeta\DTOs\PlanTarjetaDto.cs" />
+    <Compile Include="PlanTarjeta\IPlanTarjetaServicio.cs" />
+    <Compile Include="PlanTarjeta\PlanTarjetaServicio.cs" />
+    <Compile Include="Precio\DTOs\PrecioDto.cs" />
+    <Compile Include="Precio\IPrecioServicio.cs" />
+    <Compile Include="Precio\PrecioServicio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor\DTOs\ProveedorDto.cs" />
+    <Compile Include="Proveedor\IProveedorServicio.cs" />
+    <Compile Include="Proveedor\ProveedorServicio.cs" />
+    <Compile Include="Provincia\DTOs\ProvinciaDto.cs" />
+    <Compile Include="Provincia\IProvinciaServicio.cs" />
+    <Compile Include="Provincia\ProvinciaServicio.cs" />
+    <Compile Include="Reserva\DTOs\ReservaDto.cs" />
+    <Compile Include="Reserva\IReservaServicio.cs" />
+    <Compile Include="Reserva\ReservaServicio.cs" />
+    <Compile Include="Rubro\DTOs\RubroDto.cs" />
+    <Compile Include="Rubro\IRubroServicio.cs" />
+    <Compile Include="Rubro\RubroServicio.cs" />
+    <Compile Include="Salon\DTOs\SalonDto.cs" />
+    <Compile Include="Salon\ISalonServicio.cs" />
+    <Compile Include="Salon\SalonServicio.cs" />
+    <Compile Include="Tarjeta\DTOs\TarjetaDto.cs" />
+    <Compile Include="Tarjeta\ITarjetaServicio.cs" />
+    <Compile Include="Tarjeta\TarjetaServicio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XCommerce.AccesoDatos\XCommerce.AccesoDatos.csproj">
+      <Project>{2E0604EF-1BF3-4FF2-A5E1-055A911F03D9}</Project>
+      <Name>XCommerce.AccesoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DetalleCaja\DTOs\" />
+    <Folder Include="ListaProductoProveedor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

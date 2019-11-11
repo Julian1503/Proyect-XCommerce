@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{821CA114-C145-4C90-849F-60B42FE38A06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentacion.Constantes</RootNamespace>
+    <AssemblyName>Presentacion.Constantes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Color.cs" />
+    <Compile Include="ImagenesSistema.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\AbrirCaja.png" />
+    <Content Include="Imagenes\Actualizar.png" />
+    <Content Include="Imagenes\ActualizarPrecio.png" />
+    <Content Include="Imagenes\Agregar.png" />
+    <Content Include="Imagenes\BackgroundPanel.png" />
+    <Content Include="Imagenes\Bloquear.png" />
+    <Content Include="Imagenes\Buscar.png" />
+    <Content Include="Imagenes\caja-registradora %281%29.png" />
+    <Content Include="Imagenes\caja-registradora.png" />
+    <Content Include="Imagenes\Caja.png" />
+    <Content Include="Imagenes\CerrarCaja.png" />
+    <Content Include="Imagenes\CrearUsuario.png" />
+    <Content Include="Imagenes\cubiertos.png" />
+    <Content Include="Imagenes\Ejecutar.png" />
+    <Content Include="Imagenes\Eliminar.png" />
+    <Content Include="Imagenes\Guardar.png" />
+    <Content Include="Imagenes\icons8-maximizar-la-ventana-48.png" />
+    <Content Include="Imagenes\icons8-restaurar-ventana-48.png" />
+    <Content Include="Imagenes\ImagenLogin.png" />
+    <Content Include="Imagenes\ImagenNoDisponible.png" />
+    <Content Include="Imagenes\Imprimir.png" />
+    <Content Include="Imagenes\Kiosco.png" />
+    <Content Include="Imagenes\Limpiar.png" />
+    <Content Include="Imagenes\logoEmpresa.png" />
+    <Content Include="Imagenes\LogoEmpresaBlanco.png" />
+    <Content Include="Imagenes\Modificar.png" />
+    <Content Include="Imagenes\notes.png" />
+    <Content Include="Imagenes\nuevo-producto.png" />
+    <Content Include="Imagenes\Ojito.png" />
+    <Content Include="Imagenes\OjitoTachado.png" />
+    <Content Include="Imagenes\Pagar.png" />
+    <Content Include="Imagenes\PerfilVacio.jpg" />
+    <Content Include="Imagenes\ProductoVacio.jpg" />
+    <Content Include="Imagenes\Recurso 1caja.png" />
+    <Content Include="Imagenes\Recurso 2kios.png" />
+    <Content Include="Imagenes\Recurso 4caja3.png" />
+    <Content Include="Imagenes\Recurso 4moto.png" />
+    <Content Include="Imagenes\Salir.png" />
+    <Content Include="Imagenes\Seleccionar.png" />
+    <None Include="Imagenes\XCommerce.png" />
+    <None Include="Imagenes\SalirPrograma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

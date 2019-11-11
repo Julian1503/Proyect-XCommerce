@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA0C0A00-CE81-4737-B6E0-BA862AD0D132}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XCommerce</RootNamespace>
+    <AssemblyName>XCommerce</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0-preview6-19304-03\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0-preview6-19304-03\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\ControlPresentacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlPresentacion.Designer.cs">
+      <DependentUpon>ControlPresentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\ControlPresentacion.resx">
+      <DependentUpon>ControlPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presentacion.Constantes\Presentacion.Constantes.csproj">
+      <Project>{821ca114-c145-4c90-849f-60b42fe38a06}</Project>
+      <Name>Presentacion.Constantes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentacion.Core\Presentacion.Core.csproj">
+      <Project>{182430F6-1EC5-4ABB-91D9-15E4C382C9ED}</Project>
+      <Name>Presentacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentacion.FormularioBase\Presentacion.FormularioBase.csproj">
+      <Project>{ACC22144-B679-493E-9F49-B73CE144ACB3}</Project>
+      <Name>Presentacion.FormularioBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentacion.Helpers\Presentacion.Helpers.csproj">
+      <Project>{F6D40E35-E44B-49CA-BE98-D26289745B2E}</Project>
+      <Name>Presentacion.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentacion.Seguridad\Presentacion.Seguridad.csproj">
+      <Project>{0637cbcb-8d7d-4b40-ba28-c8f14fd72dad}</Project>
+      <Name>Presentacion.Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XCommerce.AccesoDatos\XCommerce.AccesoDatos.csproj">
+      <Project>{2E0604EF-1BF3-4FF2-A5E1-055A911F03D9}</Project>
+      <Name>XCommerce.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XCommerce.Servicio.Core\XCommerce.Servicio.Core.csproj">
+      <Project>{1CF1F9E3-2B3B-41C4-82C8-2C963E085FD4}</Project>
+      <Name>XCommerce.Servicio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XCommerce.Servicio.Seguridad\XCommerce.Servicio.Seguridad.csproj">
+      <Project>{1374907B-79E9-4A1D-84B4-DA03AEF86C55}</Project>
+      <Name>XCommerce.Servicio.Seguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XCommerce %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
